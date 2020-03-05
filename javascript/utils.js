@@ -90,12 +90,16 @@ function jsonToList(obj) {
 function buildHtmlSection(title,desc,imagePath){
 
     return $([
-        "<div>",
+        "<div class='tutoItem card mb-3' style=\"width: 24rem;\">",
+        "<img class=\"card-img-top\"  src=\""+imageServerURL+imagePath+"\" alt=\"Image Description\">",
+        " <div class=\"card-body\">",
         "  <h2 class='title'>"+title+"</h2>",
         "  <p class='paragraph'>"+desc+"</p>",
         "<div>",
-        "<img src=\""+imageServerURL+imagePath+"\" alt=\"Image Description\">",
-        "</div>"
+
+        "</div>",
+        "</div>",
+        "</br>"
     ].join("\n"));
 }
 

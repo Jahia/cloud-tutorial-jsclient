@@ -12,8 +12,8 @@ function getContent(){
         return {
             query: "{" +
                 "       jcr(workspace: LIVE) {" +
-                "           nodeByPath(path: \"/sites/tuto/contents/tutoList\") {" +
-                "               descendants(typesFilter: {types: [\"jntuto:tutorialSection\"]}) {"+
+                "           nodeByPath(path: \"/sites/"+siteKey+"/contents\") {" +
+                "               descendants(typesFilter: {types: [\"jntuto:tutorialItem\"]}) {"+
                 "                   nodes {"+
                 "                       title: property(name: \"jcr:title\"){value}" +
                 "                       body: property(name: \"body\"){value}" +
