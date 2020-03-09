@@ -42,8 +42,9 @@ function getContent(){
                 $("#tutoContent").append(buildHtmlSection(rowHash.title.value,rowHash.body.value,rowHash.image.path.path))
             }
 
-
-            jsonToList(jsonNodes)
+            var textedJson = JSON.stringify(jsonNodes,undefined, 2);
+            document.getElementById("jsonText").value = textedJson;
+            //jsonToList(jsonNodes)
             $("#jsonReponse").html(body);
         },
         error:function(error) {
