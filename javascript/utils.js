@@ -62,27 +62,6 @@ function ajax(options) {
 }
 
 
-/**
- * This function dynamically converts JSON object into HTML Lists
- */
-
-function jsonToList(obj) {
-    body+='<ul>'
-
-    var k;
-    if (obj instanceof Object) {
-        for (k in obj){
-            if (obj.hasOwnProperty(k)){
-                body += '<li>' + k + '</li>';
-                jsonToList( obj[k] );
-            }
-        }
-    } else {
-        body += '<li>' + obj + '</li>';
-    };
-    body+='</ul>'
-};
-
 
 /**
  * This function builds an HTML Fragment based on the parameters provided
